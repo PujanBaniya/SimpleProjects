@@ -26,7 +26,6 @@ int board()
 
 int choiceAndswap()
 {
-	int value;
 	player=(player%2==0)? 2:1;
 	char choice=(player==1)? 'X':'O';//if player one then his/her sign is X
 	cout<<"Player"<<player<<"  choose box:"<<endl;
