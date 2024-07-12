@@ -15,6 +15,15 @@ int board()
 	
 }
 
+	void cantReplace(int input)
+	{
+	if(a[input]=='X'|| a[input]=='O')
+	{
+		cout<<"\nCant replacce\n";
+		exit(1);//ends game due to violation of rule
+	}
+}
+
 int choiceAndswap()
 {
 	int value;
@@ -22,12 +31,8 @@ int choiceAndswap()
 	char choice=(player==1)? 'X':'O';//if player one then his/her sign is X
 	cout<<"Player"<<player<<"  choose box:"<<endl;
 	cin>>input;
-//	cantReplace();//check either violation of rule or not
-	if(a[input]=='X'|| a[input]=='O')
-	{
-		cout<<"\nCant replacce\n";
-		exit(1);//ends game due to violation of rule
-	}
+	cantReplace(input);
+
 
 
 	if(input <1 || input>9)
